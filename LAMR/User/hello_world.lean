@@ -270,7 +270,7 @@ element can be inserted into a list of length n -/
 
 /-7-/
 /- not sure why no error when α is instantiated by Nat -/
-def transpose (l : List (List α)) : List (List α) :=
+def transpose [Inhabited α] (l : List (List α)) : List (List α) :=
 List.map (fun i => List.map (fun vec => List.get! vec i) l)  (List.range (l.length))
 
 def mat := [[1, 2, 3], [4, 5, 6], [7, 8, 9]]

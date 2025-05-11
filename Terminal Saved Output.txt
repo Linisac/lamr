@@ -1,0 +1,121 @@
+Last login: Wed Apr 23 22:08:01 on ttys000
+**********************************************************************************************************************************
+*                                                                                                                                *
+*  + Type "man COMMAND", "info COMMAND", or "help COMMAND" to view the manual for COMMAND.                                       *
+*  + Type "info bash" to view the manual for bash scripting.                                                                     *
+*  + Use the command "script" to make a copy of Terminal use history.                                                            *
+*                                                                                                                                *
+**********************************************************************************************************************************
+cd ~/Desktop
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+
+----------------------------------------------------------------------------------------------------------------------------------
+~$ cd ~/Desktop
+
+----------------------------------------------------------------------------------------------------------------------------------
+Desktop$ cd
+
+----------------------------------------------------------------------------------------------------------------------------------
+~$ ls
+Applets		Desktop		Downloads	Library		Music		Public		envs
+Applications	Documents	Dropbox		Movies		Pictures	Sites
+
+----------------------------------------------------------------------------------------------------------------------------------
+~$ ls -a
+.			.cabal			.hol-config.sml		.stack			Documents
+..			.cargo			.html			.subversion		Downloads
+.CFUserTextEncoding	.cisco			.idlerc			.swiftpm		Dropbox
+.DS_Store		.config			.keras			.vim			Library
+.Trash			.cups			.lesshst		.viminfo		Movies
+.agda			.dropbox		.matplotlib		.vpn			Music
+.anyconnect		.elan			.mysql_history		.vscode			Pictures
+.bash_history		.emacs			.profile		.zsh_history		Public
+.bash_profile		.emacs.d		.putty			.zsh_sessions		Sites
+.bash_profile.pysave	.emacs~			.python_history		.zshenv			envs
+.bash_sessions		.ghc			.rustup			Applets
+.bashrc			.ghcup			.sh_history		Applications
+.bytertc		.gitconfig		.ssh			Desktop
+
+----------------------------------------------------------------------------------------------------------------------------------
+~$ man source
+
+----------------------------------------------------------------------------------------------------------------------------------
+~$ source ~/.bash_profile
+**********************************************************************************************************************************
+*                                                                                                                                *
+*  + Type "man COMMAND", "info COMMAND", or "help COMMAND" to view the manual for COMMAND.                                       *
+*  + Type "info bash" to view the manual for bash scripting.                                                                     *
+*  + Use the command "script" to make a copy of Terminal use history.                                                            *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+----------------------------------------------------------------------------------------------------------------------------------
+~$ cd /Users/Linisac/Documents/Computer\ Languages\ Practice/LEAN
+
+----------------------------------------------------------------------------------------------------------------------------------
+LEAN$ ls
+Icon?				Playground			Terminal Saved Output.txt
+
+----------------------------------------------------------------------------------------------------------------------------------
+LEAN$ git clone https://github.com/Linisac/lamr.git
+Cloning into 'lamr'...
+remote: Enumerating objects: 877, done.
+remote: Counting objects: 100% (70/70), done.
+remote: Compressing objects: 100% (26/26), done.
+remote: Total 877 (delta 51), reused 44 (delta 44), pack-reused 807 (from 1)
+Receiving objects: 100% (877/877), 89.44 MiB | 1.73 MiB/s, done.
+Resolving deltas: 100% (389/389), done.
+Updating files: 100% (70/70), done.
+
+----------------------------------------------------------------------------------------------------------------------------------
+LEAN$ ls
+Icon?				Playground			Terminal Saved Output.txt	lamr
+
+----------------------------------------------------------------------------------------------------------------------------------
+LEAN$ cd lamr
+
+----------------------------------------------------------------------------------------------------------------------------------
+lamr$ lake exe cache get
+info: Version 4.0.1 of elan is available! Use `elan self update` to update.
+info: downloading https://github.com/leanprover/lean4/releases/download/v4.15.0-rc1/lean-4.15.0-rc1-darwin.tar.zst
+Total: 245.7 MiB Speed:   2.5 MiB/s
+info: installing /Users/Linisac/.elan/toolchains/leanprover--lean4---v4.15.0-rc1
+info: mathlib: cloning https://github.com/leanprover-community/mathlib4
+info: mathlib: checking out revision '7d83d27ad7bfeb08a2d858ef8028e9f9d12f77db'
+info: plausible: cloning https://github.com/leanprover-community/plausible
+info: plausible: checking out revision '8e5cb8d424df462f84997dd68af6f40e347c3e35'
+info: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient
+info: LeanSearchClient: checking out revision 'd7caecce0d0f003fd5e9cce9a61f1dd6ba83142b'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph
+info: importGraph: checking out revision 'ed3b856bd8893ade75cafe13e8544d4c2660f377'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4
+info: proofwidgets: checking out revision '2b000e02d50394af68cfb4770a291113d94801b5'
+info: aesop: cloning https://github.com/leanprover-community/aesop
+info: aesop: checking out revision 'a4a08d92be3de00def5298059bf707c72dfd3c66'
+info: Qq: cloning https://github.com/leanprover-community/quote4
+info: Qq: checking out revision 'ad942fdf0b15c38bface6acbb01d63855a2519ac'
+info: batteries: cloning https://github.com/leanprover-community/batteries
+info: batteries: checking out revision 'f007bfe46ea8fb801ec907df9ab540054abcc5fd'
+info: Cli: cloning https://github.com/leanprover/lean4-cli
+info: Cli: checking out revision '0c8ea32a15a4f74143e4e1e107ba2c412adb90fd'
+installing leantar 0.1.14
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100  863k  100  863k    0     0   390k      0  0:00:02  0:00:02 --:--:-- 1233k
+
+Attempting to download 5790 file(s)
+Downloaded: 5790 file(s) [attempted 5790/5790 = 100%] (100% success)
+Decompressing 5790 file(s)
+Unpacked in 31241 ms
+Completed successfully!
+
+----------------------------------------------------------------------------------------------------------------------------------
+lamr$ lake build
+Build completed successfully.
+
+----------------------------------------------------------------------------------------------------------------------------------
+lamr$ 
