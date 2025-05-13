@@ -1,0 +1,29 @@
+$4.2 
+1.
+    v |= A      =>  v satisfies A (A is satisfied by v); v is a satisfying assignment for A; A holds/is true in v
+    v |= Gamma  =>  v satisfies Gamma...
+Gamma |= A      =>  Gamma entails A; A is a consequence of Gamma
+
+$4.3
+1. Boolean algebra characterizes propositional logic, while cylindric algebra characterizes first-order logic
+
+$4.4
+1. {~, /\, \/} is complete => Given a function f(x1, ..., xn), express the truth table as a disjunction of entries (that are conjunctions of literals) whose values are true; the resulting formula is in DNF, also known as "sum of products".
+2. {~, /\} and {~, \/} are complete, by De Morgan's laws
+
+$4.5
+1. F as the empty disjunction; T as the empty conjunction
+   -Indeed F is the identity for \/, and T is the identity for \/ (in the same way that 0 is the identity for + and 1 for *)
+
+$4.6
+1. By induction on C that for every B in subformulas(C), we have subformulas(B) is a subset of subformulas(C)
+2. By induction on A
+3. Prove {A} |= B if and only if A -> B is valid.
+4. By induction on A
+5. Use the algebraic laws in 4.3
+6. Note that {~, /\} and {~, \/} are complete. It suffices to show that ~, /\, \/ can all be expressed using "nand"; likewise for "nor".
+7. As in 6.
+8. Suffices to show that ~ cannot be expressed in {->, \/, /\} (otherwise it would be complete); note that A <-> B is logically equivalent to (A -> B) /\ (B -> A) and that T is logically equivalent to p <-> p for any propositional variable p
+9. Note that ~A is logically equivalent to A <-> F, thus it suffices to show that \/ (or /\) cannot be expressed in {F, <->}.
+10. Skipped.
+11. Should be 2^{n - 1} clauses. Do induction on n, also consider the opposite of parity (by this it seems like such a formula requires exactly 2^{n - 1} clauses...note that the truth table of such a formula comprises exactly 2^{n - 1} true entries).
