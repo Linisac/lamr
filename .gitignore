@@ -279,3 +279,6 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# .DS_Store is created by macOS to store metadata of a folder
+*.DS_Store
